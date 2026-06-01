@@ -6,6 +6,7 @@ import app.morphe.patcher.extensions.InstructionExtensions.instructionsOrNull
 import app.morphe.patcher.extensions.InstructionExtensions.removeInstructions
 import app.morphe.patcher.extensions.InstructionExtensions.replaceInstruction
 import app.morphe.patcher.patch.BytecodePatchContext
+import app.morphe.patcher.patch.Compatibility
 import app.morphe.patcher.patch.bytecodePatch
 import com.android.tools.smali.dexlib2.Opcode
 import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
@@ -58,7 +59,7 @@ val removePairipPatch = bytecodePatch(
     description = "Restores obfuscated strings and removes pairip bytecode protection.",
     default = true,
 ) {
-    compatibleWith("com.twitter.android")
+    compatibleWith(Compatibility(packageName = null, name = "Universal"))
 
     execute {
         val stringMap = HashMap<String, String>()
