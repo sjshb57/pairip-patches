@@ -1,3 +1,9 @@
+## [1.1.0](https://github.com/sjshb57/sjshb57-patches/compare/v1.0.0...v1.1.0) (2026-06-01)
+
+### ✨ New Features
+
+* 通用化 ([2501156](https://github.com/sjshb57/sjshb57-patches/commit/2501156d527b36b177a588647205af35d5340176))
+
 ## 1.0.0 (2026-06-01)
 
 ### ✨ New Features

@@ -1,54 +1,20 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "patches": [
     {
       "name": "Remove pairip protection",
       "description": "Restores obfuscated strings and removes pairip bytecode protection.",
-      "default": true,
+      "default": false,
       "dependencies": [],
-      "compatiblePackages": [
-        {
-          "packageName": "com.twitter.android",
-          "name": "Twitter / X",
-          "description": null,
-          "apkFileType": null,
-          "appIconColor": null,
-          "signatures": null,
-          "targets": [
-            {
-              "version": null,
-              "isExperimental": false,
-              "minSdk": null,
-              "description": null
-            }
-          ]
-        }
-      ],
+      "compatiblePackages": null,
       "options": []
     },
     {
       "name": "Restore extracted methods",
       "description": "Inlines methods hidden in helper classes back into the host class and removes the helper classes.",
-      "default": true,
+      "default": false,
       "dependencies": [],
-      "compatiblePackages": [
-        {
-          "packageName": "com.twitter.android",
-          "name": "Twitter / X",
-          "description": null,
-          "apkFileType": null,
-          "appIconColor": null,
-          "signatures": null,
-          "targets": [
-            {
-              "version": null,
-              "isExperimental": false,
-              "minSdk": null,
-              "description": null
-            }
-          ]
-        }
-      ],
+      "compatiblePackages": null,
       "options": []
     }
   ]
