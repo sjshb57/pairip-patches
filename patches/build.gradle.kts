@@ -2,10 +2,10 @@ group = "app.patches.sjshb57"
 
 patches {
     about {
-        name = "UserXYZ Patches"
-        description = "Patches for apps I like"
-        source = "git@github.com:UserXYZ/morphe-patches.git"
-        author = "Awesome dev"
+        name = "Pairip Patches"
+        description = "Restores obfuscated and code-extracted apps (pairip deobfuscation, method inlining, and more)"
+        source = "https://github.com/sjshb57/pairip-patches"
+        author = "sjshb57"
         contact = "na"
         website = "na"
         license = "GPLv3"
