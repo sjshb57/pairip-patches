@@ -2,7 +2,6 @@ package app.patches.deobfuscate.sjshb57
 
 import app.morphe.patcher.dex.BytecodeMode
 import app.morphe.patcher.patch.BytecodePatchContext
-import app.morphe.patcher.patch.Compatibility
 import app.morphe.patcher.patch.bytecodePatch
 import app.morphe.patcher.util.proxy.mutableTypes.MutableMethod.Companion.toMutable
 import com.android.tools.smali.dexlib2.AccessFlags
@@ -66,10 +65,8 @@ private fun BytecodePatchContext.forceFullBytecodeMode() {
 val restoreExtractedMethodsPatch = bytecodePatch(
     name = "Restore extracted methods",
     description = "Inlines methods hidden in helper classes back into the host class and removes the helper classes.",
-    default = true,
+    default = false,
 ) {
-    compatibleWith(Compatibility(packageName = "com.twitter.android", name = "Twitter / X"))
-
     execute {
         // 1. 收集真正的抽离类（类名 + static 方法 + 第一参数 == 主类）
         val extracted = HashMap<String, Method>()
