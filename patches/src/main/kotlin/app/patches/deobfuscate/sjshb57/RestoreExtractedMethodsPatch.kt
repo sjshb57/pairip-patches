@@ -1,6 +1,7 @@
 package app.patches.deobfuscate.sjshb57
 
 import app.morphe.patcher.patch.BytecodePatchContext
+import app.morphe.patcher.patch.Compatibility
 import app.morphe.patcher.patch.bytecodePatch
 import app.morphe.patcher.util.proxy.mutableTypes.MutableMethod.Companion.toMutable
 import com.android.tools.smali.dexlib2.Opcode
@@ -56,7 +57,7 @@ val restoreExtractedMethodsPatch = bytecodePatch(
     description = "Inlines methods hidden in helper classes back into the host class and removes the reflection stubs.",
     default = true,
 ) {
-    compatibleWith("com.twitter.android")
+    compatibleWith(Compatibility(packageName = null, name = "Universal"))
 
     execute {
         // 1. 收集 抽离类型 -> 它唯一的实现方法
